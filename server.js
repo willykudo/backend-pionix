@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(cors({
     origin: 'https://frontend-pionix.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
