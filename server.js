@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000; // Gunakan port dari .env atau 5000 sebag
 // Middleware untuk parsing JSON dan CORS
 app.use(express.json());
 app.use(cors({
-    origin: 'https://frontend-pionix.vercel.app', 
+    origin: true, 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
