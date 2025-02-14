@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 5000; // Gunakan port dari .env atau 5000 sebag
 
 // Middleware untuk parsing JSON dan CORS
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://frontend-pionix.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // URI MongoDB dari .env
